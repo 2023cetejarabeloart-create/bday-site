@@ -554,6 +554,7 @@ button{font:inherit;color:inherit;-webkit-appearance:none;appearance:none}
     animation-delay:0ms !important;
     animation-iteration-count:1 !important;
     transition-duration:.001ms !important;
+    transition-delay:0ms !important;
   }
   .petal{display:none}
 }
