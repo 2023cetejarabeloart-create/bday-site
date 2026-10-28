@@ -41,12 +41,20 @@
     petals.classList.toggle('is-hidden', name === 'stage');
 
     var target = scenes[name];
-    /* two frames: let the hidden state render before transitioning in */
+    var revealed = false;
+
+    function doReveal() {
+      if (revealed) return;
+      revealed = true;
+      target.classList.add('is-revealed');
+    }
+
+    /* two frames: let the hidden state render before transitioning in,
+       plus a timer fallback in case rAF is throttled */
     requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        target.classList.add('is-revealed');
-      });
+      requestAnimationFrame(doReveal);
     });
+    window.setTimeout(doReveal, 350);
   }
 
   /* ── preload: start pulling the film once she's had a moment ── */
