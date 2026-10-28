@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className += ' js';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Love</title>
+<meta name="description" content="A little something I made for you.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FDF6F0">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy Birthday, Love ♡">
+<meta property="og:description" content="Press play. I made this for you.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23B5655E' d='M16 28S3 19.5 3 11.4C3 6.8 6.4 4 10 4c2.4 0 4.6 1.3 6 3.4C17.4 5.3 19.6 4 22 4c3.6 0 7 2.8 7 7.4C29 19.5 16 28 16 28z'/%3E%3C/svg%3E">
+
+<link rel="preload" href="assets/fonts/GreatVibes-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/CormorantGaramond-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ─────────────  Act I · landing  ───────────── -->
+<section class="scene scene--landing is-active" id="landing">
+  <div class="rule" aria-hidden="true"></div>
+
+  <div class="landing__inner">
+    <p class="eyebrow rv" style="--d:.05s">For you</p>
+
+    <h1 class="hero">
+      <span class="hero__pre rv" style="--d:.16s">Happy Birthday,</span>
+      <span class="hero__name rv rv--name" style="--d:.26s">Love</span>
+    </h1>
+
+    <p class="lede rv" style="--d:.52s">Press play. I made this for you.</p>
+
+    <button class="play rv" id="playBtn" type="button" style="--d:.64s">
+      <span class="play__glyph" aria-hidden="true">&#9654;</span>
+      <span>Press to play</span>
+    </button>
+
+    <p class="hint rv" style="--d:.86s">turn your sound on &#9825;</p>
+  </div>
+</section>
+
+<!-- ─────────────  Act II · the film  ───────────── -->
+<section class="scene scene--stage" id="stage" aria-hidden="true">
+  <div class="stage__halo" aria-hidden="true"></div>
+
+  <figure class="frame" id="frame">
+    <video id="film" class="film" playsinline webkit-playsinline preload="metadata"
+           poster="assets/video/poster.jpg" disablepictureinpicture
+           x-webkit-airplay="deny">
+      <source src="assets/video/birthday.mp4" type="video/mp4">
+    </video>
+
+    <div class="frame__veil" id="veil" aria-hidden="true"><span class="ring"></span></div>
+    <div class="frame__bar" aria-hidden="true"><i id="bar"></i></div>
+    <p class="frame__hint" id="pauseHint">tap to pause</p>
+  </figure>
+
+  <button class="close" id="closeBtn" type="button" aria-label="Close video">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </svg>
+  </button>
+</section>
+
+<!-- ─────────────  Act III · after  ───────────── -->
+<section class="scene scene--after" id="after" aria-hidden="true">
+  <div class="rule" aria-hidden="true"></div>
+
+  <div class="after__inner" id="afterInner">
+    <p class="outro rv" style="--d:.10s">
+      Happy birthday,
+      <em>my love.</em>
+    </p>
+
+    <div class="divider rv" style="--d:.28s"><span>a few of my favourites</span></div>
+
+    <div class="strip rv" id="strip" style="--d:.46s">
+      <figure class="polaroid"><img src="assets/photos/01.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="polaroid"><img src="assets/photos/02.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="polaroid"><img src="assets/photos/03.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="polaroid"><img src="assets/photos/04.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="polaroid"><img src="assets/photos/05.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="polaroid"><img src="assets/photos/06.jpg" alt="" width="900" height="1200" loading="lazy"></figure>
+    </div>
+
+    <p class="swipe rv" id="swipe" style="--d:.72s">swipe &rarr;</p>
+
+    <button class="replay rv" id="replayBtn" type="button" style="--d:.84s">Watch again &#9825;</button>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <img id="lightboxImg" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
